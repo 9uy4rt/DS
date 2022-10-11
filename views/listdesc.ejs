@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB</title>
+</head>
+
+<body>
+	<center>
+    <h1 style="color:red;">Desc</h1>
+    <table border="1">
+        <tr>
+            <td>Field</td>
+            <td>Type</td>
+            <td>Null</td>
+            <td>Key</td>
+            <td>Default</td>
+            <td>Extra</td>
+        </tr>
+        <% for(var i=0;i<rows.length;i++){ var data=rows[i]; %>
+            <tr>
+                <td>
+                    <%=data.Field%>
+                </td>
+                <td>
+                    <%=data.Type%>
+                </td>
+                <td>
+                    <%=data.Null%>
+                </td>
+                <td>
+                    <%=data.Key%>
+                </td>
+                <td>
+                	<%=data.Default%>
+                </td>
+                <td>
+                	<%=data.Extra%>
+                </td>	
+            </tr>
+            <%}%>
+    </table>
+    </center>
+</body>
+
+</html>
