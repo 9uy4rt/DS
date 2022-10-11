@@ -21,13 +21,10 @@ app.get('/',function(req,res){
 app.post('/w',function(req,res){
 	const command=req.body.command;
 	//consile.log(req.body.order);
-/*	conn.connect(function(err){
-		if(err) throw err;
-		else*/ if(command=="book"){
+	if(command=="book"){
 		var sql="SELECT * FROM book ";
 		conn.query(sql,function(err,result){
 			if(err) throw err;
-			//console.log(result);
 			res.render('list.ejs',{rows:result});
 			});
 		}else if(command=="tables"){
@@ -69,9 +66,6 @@ app.post('/w',function(req,res){
       }
 
 	});
-	
-	//res.send('OK');
-//});
 
 app.listen(port,function(err){
 	if(err) throw err;
